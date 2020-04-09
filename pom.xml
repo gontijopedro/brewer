@@ -6,10 +6,10 @@
   <groupId>com.pedrogontijo</groupId>
   <artifactId>brewer</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  
-  <packaging>war</packaging>
-  
-  <properties>
+
+	<packaging>war</packaging>
+
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -27,7 +27,7 @@
 		<servlet.version>3.1.0</servlet.version>
 		
 		<!-- Thymeleaf -->
-		<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
+		<thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
 		
 		<!-- Bean Validation / Hibernate Validator -->
 		<hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
@@ -79,6 +79,11 @@
 		<!-- Apache Commons DBCP -->
 		<commons-dbcp2.version>2.1.1</commons-dbcp2.version>
 		
+		<!-- JasperReports -->
+		<jasperreports.version>6.3.0</jasperreports.version>
+		
+		<!-- JasperReports Fonts -->
+		<jasperreports-fonts.version>6.0.0</jasperreports-fonts.version>
 	</properties>
 
 	<build>
@@ -360,6 +365,20 @@
 			<artifactId>commons-dbcp2</artifactId>
 			<version>${commons-dbcp2.version}</version>
 			<scope>compile</scope>
+		</dependency>
+		
+		<!-- JasperReports -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>${jasperreports.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+		    <groupId>net.sf.jasperreports</groupId>
+		    <artifactId>jasperreports-fonts</artifactId>
+		    <version>${jasperreports-fonts.version}</version>
+		    <scope>compile</scope>
 		</dependency>
 		
 	</dependencies>
