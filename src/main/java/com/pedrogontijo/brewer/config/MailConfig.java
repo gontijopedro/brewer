@@ -16,7 +16,7 @@ import com.pedrogontijo.brewer.mail.Mailer;
 @Configuration
 @ComponentScan(basePackageClasses = Mailer.class)
 @PropertySource({ "classpath:env/mail-${ambiente:local}.properties" })
-@PropertySource(value = "file:\\${USER.HOME}\\.brewer-mail.properties", ignoreResourceNotFound = true)
+@PropertySource(value = { "file:${USERPROFILE}/.brewer-mail.properties" }, ignoreResourceNotFound = true)
 public class MailConfig {
 	
 	@Autowired
@@ -31,7 +31,7 @@ public class MailConfig {
 		mailSender.setPassword(env.getProperty("SENDGRID_PASSWORD"));
 		
 		System.out.println(">>>>>>>username: " + env.getProperty("email.username") );		
-		System.out.println(">>>>>>>senha: " + env.getProperty("password") );
+		System.out.println(">>>>>>>senha: " + env.getProperty("SENDGRID_PASSWORD") );
 		
 		Properties props = new Properties();
 		props.put("mail.transport.protocol", "smtp");
